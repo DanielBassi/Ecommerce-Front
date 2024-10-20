@@ -55,14 +55,14 @@ export class OrdenComponent implements OnInit {
   private postInsertOrder(crud: any): void {
     this.servicesService.setLoadingVisible(true);
     this.orderService.postInsertOrder(crud.order).subscribe((res) => {
-      this.servicesService.notify('orden creada exitosamente', 'success');
+      this.servicesService.notify('Orden creada exitosamente', 'success');
       this.listarOrdenes();
     });
   }
   private putUpdateOrder(crud: any): void {
     this.servicesService.setLoadingVisible(true);
     this.orderService.putUpdateOrder(crud.order).subscribe((res) => {
-      this.servicesService.notify('orden editada exitosamente', 'success');
+      this.servicesService.notify('Orden editada exitosamente', 'success');
     });
     this.listarOrdenes();
   }

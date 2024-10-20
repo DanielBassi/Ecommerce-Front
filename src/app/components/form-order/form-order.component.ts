@@ -26,9 +26,6 @@ export class FormOrderComponent implements OnInit {
   modoView: boolean = false;
   products: ProductDTO[] = [];
 
-  /* Notifications */
-  notifications: any[] = [];
-
   constructor(private productService: ProductService) {
     const unitValue = 0;
     const quantity = this.crud.order.quantity ?? 1;

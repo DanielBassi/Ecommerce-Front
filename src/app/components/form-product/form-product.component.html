@@ -4,14 +4,14 @@
     <dxi-item itemType="group" [colCount]="4" [colSpan]="4">
 
       <dxi-item dataField="name" [colSpan]="2" [label]="{text:'Nombre'}">
-        <dxi-validation-rule type="required" *ngIf="crud.action != 'VIEW'"></dxi-validation-rule>
+        <dxi-validation-rule type="required" *ngIf="modoView"></dxi-validation-rule>
       </dxi-item>
       <dxi-item dataField="price" editorType="dxNumberBox" [colSpan]="2" [label]="{text:'Precio'}"
         [editorOptions]="{ min: 1 }">
-        <dxi-validation-rule type="required" *ngIf="crud.action != 'VIEW'"></dxi-validation-rule>
+        <dxi-validation-rule type="required" *ngIf="modoView"></dxi-validation-rule>
       </dxi-item>
       <dxi-item dataField="description" editorType="dxTextArea" [colSpan]="4" [label]="{text:'Descripción'}">
-        <dxi-validation-rule type="required" *ngIf="crud.action != 'VIEW'"></dxi-validation-rule>
+        <dxi-validation-rule type="required" *ngIf="modoView"></dxi-validation-rule>
       </dxi-item>
     </dxi-item>
 

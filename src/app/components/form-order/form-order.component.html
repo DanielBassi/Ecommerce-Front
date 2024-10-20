@@ -2,11 +2,10 @@
   <dx-form id="form" name="form" [colCount]="4" [(formData)]="crud.order" labelLocation="top" [readOnly]="modoView">
 
     <dxi-item itemType="group" [colCount]="4" [colSpan]="4">
-
       <dxi-item editorType="dxDateBox" [colSpan]="2" dataField="orderDate"
         [editorOptions]="{ type: 'date', displayFormat: 'dd/MM/yyyy', max: currentDate }"
         [label]="{text:'Fecha de la orden'}">
-        <dxi-validation-rule type="required"></dxi-validation-rule>
+        <dxi-validation-rule type="required" *ngIf="modoView"></dxi-validation-rule>
       </dxi-item>
 
       <dxi-item dataField="productId" alignment="bottom" [colSpan]="2" [label]="{ text: 'Producto deseado' }"
@@ -17,7 +16,7 @@
             [showClearButton]="true">
           </dx-select-box>
         </div>
-        <dxi-validation-rule type="required"></dxi-validation-rule>
+        <dxi-validation-rule type="required" *ngIf="modoView"></dxi-validation-rule>
       </dxi-item>
 
       <dxi-item dataField="quantity" [colSpan]="2" [label]="{text:'Cantidad'}" isRequired="true">
@@ -26,17 +25,17 @@
             (onValueChanged)="onQuantityChanged($event)">
           </dx-number-box>
         </div>
-        <dxi-validation-rule type="required"></dxi-validation-rule>
+        <dxi-validation-rule type="required" *ngIf="modoView"></dxi-validation-rule>
       </dxi-item>
 
       <dxi-item dataField="unitValue" [colSpan]="2" editorType="dxNumberBox"
         [editorOptions]="{ type:'currency', readOnly: true }" [label]="{text:'Valor unitario ($COP)'}">
-        <dxi-validation-rule type="required"></dxi-validation-rule>
+        <dxi-validation-rule type="required" *ngIf="modoView"></dxi-validation-rule>
       </dxi-item>
 
       <dxi-item dataField="totalValue" [colSpan]="2" editorType="dxNumberBox"
         [editorOptions]="{ type:'currency', readOnly: true }" [label]="{text:'Valor total ($COP)'}">
-        <dxi-validation-rule type="required"></dxi-validation-rule>
+        <dxi-validation-rule type="required" *ngIf="modoView"></dxi-validation-rule>
       </dxi-item>
     </dxi-item>
 

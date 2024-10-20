@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  APIPRODUCT_URL: 'http://localhost:49920/api/',
-  APIORDER_URL: 'http://localhost:49920/api/',
+  APIPRODUCT_URL: 'http://localhost:5290/api/',
+  APIORDER_URL: 'http://localhost:5291/api/',
   ASSET_PATH: './assets/img/',
   HORAINICIODEFECTO: '06:00',
   HORAFINDEFECTO: '22:00',

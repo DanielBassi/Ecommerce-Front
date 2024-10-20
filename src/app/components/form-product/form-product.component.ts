@@ -28,7 +28,6 @@ export class FormProductComponent implements OnInit {
 
   ngOnChanges(crud: SimpleChanges) {
     this.modoView = this.crud.action === 'VIEW';
-    //this.form?.instance?.resetValues()
   }
 
 
